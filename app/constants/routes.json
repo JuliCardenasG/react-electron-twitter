@@ -1,4 +1,5 @@
 {
   "WELCOME": "/",
-  "COUNTER": "/counter"
+  "COUNTER": "/counter",
+  "DASHBOARD": "/dashboard"
 }
