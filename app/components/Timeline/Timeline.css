@@ -1,0 +1,11 @@
+.list {
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.screenName {
+  font-size: small;
+  padding-left: 4px;
+  color: #555555;
+}
