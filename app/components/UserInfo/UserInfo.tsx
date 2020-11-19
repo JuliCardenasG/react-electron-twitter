@@ -26,7 +26,7 @@ export default function UserInfo({currentUser}: Props): ReactElement {
   return (
     <Card
       cover={
-        <img src={currentUser.profile_background_image_url_https} className={styles.coverImg}/>
+        <img src={currentUser.profile_banner_url} className={styles.coverImg}/>
       }
     >
       <Meta
