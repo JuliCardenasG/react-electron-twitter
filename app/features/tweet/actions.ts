@@ -1,9 +1,10 @@
 // Actions for Tweet slice
 
 import { api } from '../../api';
+import { UserType } from './tweet';
 import { tweetSlice } from './tweetSlice';
 
-const { tweetsLoad, tweetsSuccess, tweetsError, setUsername } = tweetSlice.actions
+const { tweetsLoad, tweetsSuccess, tweetsError, setUsername, setCurrentUser } = tweetSlice.actions;
 
 // Fetch tweets from Twitter API
 export const fetchTweets = (twitterUsername: string) => async dispatch => {
@@ -16,7 +17,12 @@ export const fetchTweets = (twitterUsername: string) => async dispatch => {
     }
 
     await api.get('/statuses/user_timeline.json', { params })
-      .then((response) => dispatch(tweetsSuccess(response.data)))
+      .then((response) => {
+        dispatch(tweetsSuccess(response.data));
+        // Get user from first tweet and set is as currentUser to display their info in the header
+        const currentUser: UserType = response.data[0].user;
+        dispatch(setCurrentUserAction(currentUser));
+      })
   }
   catch (e) {
     dispatch(tweetsError(e.message));
@@ -27,4 +33,9 @@ export const fetchTweets = (twitterUsername: string) => async dispatch => {
 // Set Twitter username for timeline search
 export const setUsernameAction = (twitterUsername: string) => async dispatch => {
   dispatch(setUsername(twitterUsername));
+}
+
+// Set Twitter user whose tweets are being displayed
+export const setCurrentUserAction = (currentUser: UserType) => async dispatch => {
+  dispatch(setCurrentUser(currentUser))
 }

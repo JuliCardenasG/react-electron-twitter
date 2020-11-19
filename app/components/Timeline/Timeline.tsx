@@ -8,30 +8,23 @@ import { List, Avatar } from 'antd';
 import { RetweetOutlined, StarOutlined } from '@ant-design/icons';
 import IconText from '../IconText/IconText';
 import Linkify from 'react-linkify';
+import TwitterUsername from '../TwitterUsername/TwitterUsername';
+
+
+type Props = {
+  tweets: TweetType[],
+  isLoading: boolean
+};
 
 
 
-
-export default function Timeline(): ReactElement {
-  const dispatch = useDispatch();
-  const { username, tweets, isLoading , error } = useSelector((state: RootState) => state.tweets);
-
-  useEffect(() => {
-    dispatch(fetchTweets(username));
-  }, []);
-
-  const TwitterUsername = ({name, screen_name}) => {
-    return (
-      <div>
-        <span> {name} <span className={styles.screenName}> @{screen_name} </span></span>
-      </div>
-    )
-  }
+export default function Timeline({ tweets, isLoading }: Props): ReactElement {
 
   return (
     <List className={styles.list}
       itemLayout="vertical"
-      size="large"
+      size="small"
+      loading={isLoading}
       dataSource={tweets}
       renderItem={ (tweet: TweetType) => (
         <List.Item

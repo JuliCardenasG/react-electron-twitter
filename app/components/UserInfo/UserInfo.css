@@ -1,0 +1,13 @@
+.coverImg {
+  width: 100%;
+  height: 300px;;
+}
+
+.avatarImg {
+  width: 100px;
+  height: 100px;
+}
+
+.followers {
+  padding-left: 15px;
+}

@@ -1,17 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { UserType } from './tweet';
 
 export const tweetSlice = createSlice({
   name: 'tweet',
   initialState: {
     username: '',
+    currentUser: {} as UserType,
     tweets: [],
     isLoading: false,
     error: false
   },
   reducers: {
-    setUsername: (state, action) => {
-      state.username = action.payload
-    },
     tweetsLoad: (state) => {
       state.tweets = [],
       state.isLoading = true;
@@ -25,7 +24,15 @@ export const tweetSlice = createSlice({
     tweetsError: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
-    }
+    },
+    setUsername: (state, action) => {
+      state.username = action.payload;
+      state.isLoading = false;
+    },
+    setCurrentUser: (state, action) => {
+      state.currentUser = action.payload;
+      state.isLoading = false;
+    },
   }
 })
 
