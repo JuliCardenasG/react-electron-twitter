@@ -17,7 +17,7 @@ export default function UserInfo({currentUser}: Props): ReactElement {
   const FollowersCount = (): ReactElement => {
     return (
       <div>
-        <span>Following:{ currentUser.friends_count }</span>
+        <span>Following: { currentUser.friends_count }</span>
         <span className={styles.followers}>Followers: { currentUser.followers_count }</span>
       </div>
     )
