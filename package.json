@@ -103,6 +103,22 @@
       "private": false
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliCardenasG/react-electron-twitter.git"
+  },
+  "author": {
+    "name": "Julián Cárdenas",
+    "email": "julicardenasgonzalez@gmail.com",
+    "url": "https://github.com/julicardenasg"
+  },
+  "contributors": [
+    {
+      "name": "Julián Cárdenas",
+      "email": "julicardenasgonzalez@gmail.com",
+      "url": "https://github.com/julicardenasg"
+    }
+  ],
   "license": "MIT",
   "jest": {
     "testURL": "http://localhost/",

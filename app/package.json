@@ -8,6 +8,11 @@
     "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
     "postinstall": "yarn electron-rebuild"
   },
+  "author": {
+    "name": "Julián Cárdenas",
+    "email": "julicardenasgonzalez@gmail.com",
+    "url": "https://github.com/julicardenasg"
+  },
   "license": "MIT",
   "dependencies": {}
 }
