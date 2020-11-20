@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import styles from './Welcome.css';
-import twitterLogo from '../../utils/Twitter_Logo_Blue.png';
+import twitterLogo from '../../assets/Twitter_Logo_Blue.png';
 import { Input } from 'antd';
 import { useDispatch } from 'react-redux';
 import { setUsernameAction } from '../../features/tweet/actions';
@@ -29,6 +29,7 @@ export default function Welcome(): ReactElement {
 
       <Search
         className={styles.search}
+        addonBefore="@"
         placeholder='You can try with @axosoft'
         allowClear
         enterButton='Search'

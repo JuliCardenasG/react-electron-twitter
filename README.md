@@ -15,7 +15,7 @@ Note: If you're running this application in development mode you're going to nee
 of the application.
 
 ```
-REACT_APP_BEARER_TOKEN='Here goes your Twitter API Bearer Token'
+REACT_APP_BEARER_TOKEN=Here goes your Twitter API Bearer Token
 ```
 
 ## Packaging for Production

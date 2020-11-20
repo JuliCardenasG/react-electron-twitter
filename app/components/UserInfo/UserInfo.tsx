@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default function UserInfo({currentUser}: Props): ReactElement {
-  console.log(currentUser)
 
   const { Meta } = Card;
 
