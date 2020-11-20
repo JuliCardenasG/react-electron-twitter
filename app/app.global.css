@@ -34,3 +34,7 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+.ant-spin-dot-item {
+  background-color: white;
+}

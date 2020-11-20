@@ -1,5 +1,6 @@
 // Actions for Tweet slice
 
+import { Dispatch } from 'react';
 import { api } from '../../api';
 import { UserType } from './tweet';
 import { tweetSlice } from './tweetSlice';
@@ -7,7 +8,7 @@ import { tweetSlice } from './tweetSlice';
 const { tweetsLoad, tweetsSuccess, tweetsError, setUsername, setCurrentUser } = tweetSlice.actions;
 
 // Fetch tweets from Twitter API
-export const fetchTweets = (twitterUsername: string) => async dispatch => {
+export const fetchTweets = (twitterUsername: string) => async (dispatch: Dispatch<any>) => {
   try {
     dispatch(tweetsLoad());
 
@@ -31,11 +32,11 @@ export const fetchTweets = (twitterUsername: string) => async dispatch => {
 }
 
 // Set Twitter username for timeline search
-export const setUsernameAction = (twitterUsername: string) => async dispatch => {
+export const setUsernameAction = (twitterUsername: string) => async (dispatch: Dispatch<any>) => {
   dispatch(setUsername(twitterUsername));
 }
 
 // Set Twitter user whose tweets are being displayed
-export const setCurrentUserAction = (currentUser: UserType) => async dispatch => {
+export const setCurrentUserAction = (currentUser: UserType) => async (dispatch: Dispatch<any>) => {
   dispatch(setCurrentUser(currentUser))
 }

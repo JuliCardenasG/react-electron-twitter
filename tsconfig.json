@@ -21,7 +21,6 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "semicolon": [true, "always", "ignore-bound-class-methods"],
   },
   "exclude": [
     "test",
