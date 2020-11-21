@@ -104,7 +104,7 @@ function setup (preloadedState = tweetsPreloadState) {
   return { store, component, shallowComponent };
 }
 
-fdescribe('Dashboard component', () => {
+describe('Dashboard component', () => {
   it('should render', () => {
     const { shallowComponent } = setup({
       tweets: {
