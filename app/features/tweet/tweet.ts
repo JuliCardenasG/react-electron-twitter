@@ -17,15 +17,10 @@ export type UserType = {
   location: string;
   description: string;
   url: string;
-  protected: string;
+  protected: boolean;
   friends_count: number;
   followers_count: number;
-  verified: string;
-  profile_background_color: string;
-  profile_background_image_url: string;
-  profile_background_image_url_https: string;
-  profile_background_tile: string;
-  profile_image_url: string;
+  verified: boolean;
   profile_image_url_https: string;
   profile_banner_url: string;
 }

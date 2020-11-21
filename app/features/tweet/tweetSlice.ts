@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { UserType } from './tweet';
+import { TweetType, UserType } from './tweet';
 
 export const tweetSlice = createSlice({
   name: 'tweet',
   initialState: {
     username: '',
     currentUser: {} as UserType,
-    tweets: [],
+    tweets: [] as TweetType[],
     isLoading: false,
     error: false
   },
