@@ -38,3 +38,7 @@ a:hover {
 .ant-spin-dot-item {
   background-color: white;
 }
+
+.ant-card-bordered {
+  border-bottom: 2px solid #a0a0a0;
+}
