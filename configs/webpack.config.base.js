@@ -4,8 +4,8 @@
 
 import path from 'path';
 import webpack from 'webpack';
-import { dependencies as externals } from '../app/package.json';
 import dotenv from 'dotenv';
+import { dependencies as externals } from '../app/package.json';
 
 export default {
   externals: [...Object.keys(externals || {})],

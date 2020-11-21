@@ -1,8 +1,5 @@
-import React, { ReactElement, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchTweets } from '../../features/tweet/actions';
+import React, { ReactElement } from 'react';
 import { TweetType } from '../../features/tweet/tweet';
-import { RootState } from '../../store';
 import styles from './Timeline.css';
 import { List, Avatar } from 'antd';
 import { RetweetOutlined, StarOutlined } from '@ant-design/icons';
