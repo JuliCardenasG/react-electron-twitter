@@ -30,5 +30,6 @@ Deliverables will be in `release` folder
 ## Technical considerations
 This app was built in about 6-8 hours and it is just for demo purposes. Due to time constraints, there is a room for lots of improvements:
 - UI/UX is very simple and could be improved in many ways
-- Unit test coverage also could be improved by a lot, as there are just a few tests due again to time constraints.
-- Tried to keep the distinction betweetn stateless and stateful components
+- Unit test coverage also could be improved by a lot, as there are just a few tests due again to time constraints
+- Error handling could be improved. There is now just a simple message that states an error has happened
+- Tried to keep the distinction betweetn stateless and stateful components to put logic
