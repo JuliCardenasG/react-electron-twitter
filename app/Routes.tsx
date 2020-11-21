@@ -12,9 +12,10 @@ const LazyCounterPage = React.lazy(() =>
   import(/* webpackChunkName: "CounterPage" */ './containers/CounterPage')
 );
 
-const LazyDashboardPage = React.lazy(() =>
-  import(/* webpackChunkName: "CounterPage" */ './containers/DashboardPage')
-);
+// Tried to lazy load this component but it did not work
+// const LazyDashboardPage = React.lazy(() =>
+//   import(/* webpackChunkName: "DashboardPage" */ './containers/DashboardPage')
+// );
 
 const CounterPage = (props: Record<string, any>) => (
   <React.Suspense fallback={<h1>Loading...</h1>}>
