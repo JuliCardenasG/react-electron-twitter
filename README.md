@@ -4,7 +4,7 @@ Project created using [electron-react-boilerplate](https://github.com/electron-r
 Electron-based React application to display a Twitter feed. It uses React with [Ant Design](https://ant.design/docs/react/introduce) for the UI and Electron as a platform to build a desktop app for multiple targets.
 
 ## Technical considerations
-This app was built in about 9-10 hours and it is just for demo purposes. Due to time constraints, there is a room for lots of improvements:
+This app was built in about 9-10 hours and it is just for demo purposes. Due to time constraints, there is room for lots of improvements:
 - UI/UX is very simple and could be improved in many ways
 - Unit test coverage also could be improved by a lot, as there are just a few tests due again to time constraints
 - Error handling could be improved. There is now just a simple message which states that an error has happened
